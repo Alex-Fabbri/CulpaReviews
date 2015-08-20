@@ -3,16 +3,12 @@ Culpa Reviews: Alex Fabbri (arf2145), Winston Lin (wyl2106), Lusa Zhan (lz2371)
 To run the program: 
 First, the following modules will be needed to run the program: 
 
-flask 
-nltk
-re
-urllib2
-bs4 
-unicodedata
-nltk.classify.util
-nltk.corpus
+`pip install -r requirements.txt`
+`python -m nltk.downloader punkt`
 
-In terminal, run app.py. This will start the webapp on your local server. You will get a message similar to this:  "* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)  * Restarting with stat". After opening that site (page.html), you are prompted to enter a link for the culpa page of a professor. The link must be of the form http://culpa.info/professors/ followed by a number that corresponds to a given professor's page. Here are some test links: http://culpa.info/professors/44    http://culpa.info/professors/2643  Failure to provide a link or providing a link of improper format will result in a popup or an error message on the new page respectively. You may go back and fill in a proper link. Having provided a proper link, you are taken to a results page (results.html). Here you find an initial message with the professor's name. Then we display quotes, if any, from reviews that contain the words 'easy', 'difficult', 'best', 'worst' as these are polar indicator words that can give a sense of the overall views on a professor. Following that, for each review we display the review number followed by how many positive and how many negative words (according to two lists of words) the review contains out of the total number of words. Below that, we say which reviews are reliable and which are not. culpa.info has a feature which allows viewers to agree with a review, disagree with a review, or mark it as funny. There is a counter for each category in each review. If a given review has more disagree votes than agree votes, we alert the user that this review is not very credible. Finally, using the count of positive and negative words in each review from above, we state the ratio of positive to negative reviews among agreeable reviews(those for which more people voted 'agree' than 'disagree') and then the ratio among all reviews(if all reviews were agreeable these are the same). 
+In terminal, run app.py. This will start the webapp on your local server.
+You will get a message similar to this:  "* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)  * Restarting with stat". 
+After opening that site (page.html), you are prompted to enter a link for the Culpa page of a professor. The link must be of the form http://culpa.info/professors/ followed by a number that corresponds to a given professor's page. Here are some test links: http://culpa.info/professors/44    http://culpa.info/professors/2643. Failure to provide a link or providing a link of improper format will result in a popup or an error message on the new page respectively. You may go back and fill in a proper link. Having provided a proper link, you are taken to a results page (results.html). Here you find an initial message with the professor's name. Then we display quotes, if any, from reviews that contain the words 'easy', 'difficult', 'best', 'worst' as these are polar indicator words that can give a sense of the overall views on a professor. Following that, for each review we display the review number followed by how many positive and how many negative words (according to two lists of words) the review contains out of the total number of words. Below that, we say which reviews are reliable and which are not. culpa.info has a feature which allows viewers to agree with a review, disagree with a review, or mark it as funny. There is a counter for each category in each review. If a given review has more disagree votes than agree votes, we alert the user that this review is not very credible. Finally, using the count of positive and negative words in each review from above, we state the ratio of positive to negative reviews among agreeable reviews(those for which more people voted 'agree' than 'disagree') and then the ratio among all reviews(if all reviews were agreeable these are the same). 
 
 
 Some details on the project:
